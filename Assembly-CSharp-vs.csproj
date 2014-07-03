@@ -46,8 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AI.cs" />
+     <Compile Include="Assets\Scripts\BackToMenu.cs" />
      <Compile Include="Assets\Scripts\Control.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
+     <Compile Include="Assets\Scripts\WinnerText.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

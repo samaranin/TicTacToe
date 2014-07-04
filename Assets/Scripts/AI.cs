@@ -100,8 +100,11 @@ namespace TicTacToe
 		private static int AnotherMoves(int player)
 		{
 			if ((_field[1,0] == _field[0,1]) && (_field[1,0] == _field[0,2]) && (_field[1,0] == -player) &&
-			    (_field[1,1] == _field[1,2]) && (_field[1,1] == player)) return 1;
-			if (_field[1,1] == 0) return 5; //try to take center
+			    (_field[1,1] == _field[1,2]) && (_field[1,1] == player) && (_field[0,0] == 0)) return 1;
+			if ((_field[1,0] == _field[0,1]) && (_field[1,0] == _field[0,2]) && (_field[1,0] == -player) &&
+			    (_field[1,1] == _field[1,2]) && (_field[1,1] == player) && (_field[0,0] == player) && (_field[2,1] == 0 )) return 8;
+			if ((_field[1,0] == _field[0,1]) && (_field[1,0] == _field[0,2]) && (_field[1,0] == -player) &&
+			    (_field[1,1] == _field[1,2]) && (_field[1,1] == player) && (_field[0,0] == player) && (_field[2,0] == 0 )) return 7;	if (_field[1,1] == 0) return 5; //try to take center
 			else 
 			{
 				if (_field[1,1] == player) //else try to take center vertical or horizontal
